@@ -2,6 +2,8 @@ package com.challenge.api.model;
 
 import java.time.Instant;
 import java.util.UUID;
+// added for deserialization of Employee objects from JSON
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * Every abstraction of an Employee should, at the bare minimum, implement this interface. Consider this a binding
