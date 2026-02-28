@@ -1,14 +1,15 @@
 package com.challenge.api.model;
 
+// added in order to support deserialization of EmployeeModel instances when Employee is used as the type in API controllers.
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.time.Instant;
 import java.util.UUID;
-// added for deserialization of Employee objects from JSON
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * Every abstraction of an Employee should, at the bare minimum, implement this interface. Consider this a binding
  * contract for the domain model of an Employee.
  */
+@JsonDeserialize(as = EmployeeModel.class)
 public interface Employee {
 
     UUID getUuid();
