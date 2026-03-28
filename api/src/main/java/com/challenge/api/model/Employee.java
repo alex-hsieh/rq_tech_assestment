@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.util.UUID;
 // added for deserialization of Employee objects from JSON
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+// @JsonDeserialize(as = EmployeeModel.class) // tells Jackson to deserialize JSON into EmployeeModel instances
 
 /**
  * Every abstraction of an Employee should, at the bare minimum, implement this interface. Consider this a binding
